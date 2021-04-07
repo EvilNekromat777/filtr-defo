@@ -335,7 +335,6 @@ button, input, textarea {
 
 .sidebar-filter__span-input {
   position: relative;
-  border: 2px solid red;
   width: 124px;
   height: 35px;
   border: 1px solid #d5d5d5;
@@ -367,7 +366,7 @@ button, input, textarea {
 .irs__line {
   position: relative;
   display: block;
-  background-color: #d33234;
+  background-color: #c92123;
   height: 4px;
   width: 252px;
 }
@@ -402,7 +401,7 @@ button, input, textarea {
   margin-bottom: 5px;
 }
 .colors-block__item.active {
-  border: 2px solid #000;
+  border: 2px solid #c92123;
 }
 .colors-block__item_white {
   border: 1px solid #d5d5d5;
@@ -418,6 +417,9 @@ button, input, textarea {
 }
 .colors-block__item_red {
   background-color: #dc0000;
+}
+.colors-block__item_red.active {
+  border: 2px solid #d5d5d5;
 }
 .colors-block__item_yellow {
   background-color: #eaa521;
@@ -445,9 +447,6 @@ button, input, textarea {
 }
 .colors-block__item_black {
   background-color: #000000;
-}
-.colors-block__item_black.active {
-  border: 2px solid #dc0000;
 }
 
 .sidebar-filter .colors-block__item label {
