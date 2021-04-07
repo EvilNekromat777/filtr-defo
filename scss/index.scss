@@ -1,0 +1,323 @@
+// Подключаем шрифты
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+
+// Обнуление: общие параметры
+@import "null.scss";
+@import "radio.scss";
+
+// Миксины
+@import "mixins.scss";
+
+
+body {
+    font-family: Roboto,Arial,sans-serif;
+    position: relative;
+    line-height: 1.2;
+    font-size: 18px;
+    font-weight: 400;
+    background-color: #f6f6f6;
+    -webkit-font-smoothing: antialiased;
+}
+// Оболочка
+.wrapper {
+    overflow: hidden;
+    min-height: 100%;
+    width: 320px;
+    margin: 50px auto;
+    // border: 2px solid red;
+    display: flex;
+    justify-content: center;
+
+}
+button, input, textarea {
+    outline: 0;
+    -webkit-appearance: none;
+    resize: none;
+}
+
+// ===============>
+
+.sidebar {
+    z-index: 7;
+    position: sticky;
+    left: 0;
+    top: 0;
+    width: 294px;
+    border: 2px solid red;
+    padding: 20px 10px 0px 15px;
+    background-color: #ffffff;
+    
+}
+.sidebar-filter {
+    background-color: #fff;
+    margin-bottom: 16px;
+    position: relative;
+    &__polzunok-min{
+        margin: 0px 6px 0px 0px;
+    }
+}
+.sidebar-filter__title {
+    font-size: 16px;
+    line-height: 17px;
+    font-weight: 500;
+    color: #333;
+}
+.sidebar-filter__block {
+    padding: 20px 0px 20px 0px;
+    border-bottom: 2px solid #e9e9e97e;
+}
+.sidebar-filter__block_price{
+    padding: 20px 0px 20px 0px;
+    
+}
+.sidebar-filter__block-title {
+    margin: 0px 0px 10px 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;
+    background: 0 0;
+    border: none;
+}
+.sidebar-filter__text{
+    font-size: 14px;
+    font-weight: 500;
+    color: #6f6d6d;
+}
+.sidebar-filter__text_small{
+    font-weight: 400;
+}
+.sidebar-filter__color {
+    padding: 8px 0 0px 0;
+    position: relative;
+}
+.sidebar-filter__block-title .arrow {
+    position: relative;
+    width: 10px;
+    height: 17px;
+    -webkit-transform: rotate(
+180deg
+);
+    transform: rotate(
+180deg
+);
+}
+.sidebar-filter__block-title.active .arrow {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+}
+.sidebar-filter__block-title .arrow:after {
+    position: absolute;
+    content: url(../images/arrow-little-black.svg);
+    top: 0;
+    right: 20px;
+}
+.sidebar-filter__block-content {
+    padding: 8px 0 24px;
+    position: relative;
+}
+.sidebar-filter__vertical-check{
+    margin: 20px 0px 0px 0px;
+}
+
+// =========================================>
+.sidebar-filter__polzunok{
+    display: flex;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 20px 0px;
+    input{
+        width: 124px;
+        height: 35px;
+        border: 1px solid #d5d5d5;
+        padding: 0px 0px 0px 12px;
+        font-size: 12px;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: normal;
+        line-height: normal;
+        text-transform: uppercase;
+        color: #d5d5d5;
+    }
+    fieldset{
+        position: relative;
+        display: flex;
+        align-items: center;
+        
+    }
+    
+}
+.sidebar-filter__polzunok-section{
+    margin: 20px 0px 40px 0px;
+}
+.sidebar__price-span{
+    position: absolute;
+    top: 8px;
+    right: 15px;
+}
+.sidebar__price-span_left{
+    right: 21px;
+}
+
+// =========================================>
+.irs {
+}
+.irs__slider{
+    position: relative;
+}
+.irs__line {
+    position: relative;
+    display: block;
+    background-color: #d33234;
+    height: 4px;
+    width: 252px;
+}
+.irs__min, .irs__max{
+    width: 18px;
+    height: 27px;
+    position: absolute;
+    top: -10px;
+    cursor: pointer;
+}
+.irs__min{
+    background: url('../images/irs-min.png') center;
+    left: -8px;
+}
+.irs__max{
+    background: url('../images/irs-max.png') center;
+    right: 0px;
+}
+
+
+// ===========================================>
+
+.colors-block{
+    display: flex;
+    flex-wrap: wrap;
+    &__item{
+        position: relative;
+        height: 34px;
+        width: 34px;
+        margin-right: 6px;
+        margin-bottom: 5px;
+    }
+    &__item.active{
+        border: 2px solid #000;
+    }
+    &__item_white{
+        border: 1px solid #d5d5d5;
+    }
+    &__item_bezhevyy{
+        background-color: #f5f5dd;
+    }
+    &__item_bordo{
+        background-color: #830032;
+    }
+    &__item_brown{
+        background-color: #864b0a;
+    }
+    &__item_red{
+        background-color: #dc0000;
+    }
+    &__item_yellow{
+        background-color: #eaa521;
+    }
+    &__item_lemon{
+        background-color: #ffff39;
+    }
+    &__item_light-green{
+        background-color: #a6ff3d;
+    }
+    &__item_green{
+        background-color: #468018;
+    }
+    &__item_blue{
+        background-color: #6daafc;
+    }
+    &__item_siniy{
+        background-color: #0000fa;
+    }
+    &__item_purple{
+        background-color: #7e16a9;
+    }
+    &__item_grey{
+        background-color: #808080;
+    }
+    &__item_black{
+        background-color: #000000;
+    }
+    &__item_black.active{
+        border: 2px solid #dc0000;
+    }
+}
+.sidebar-filter .colors-block__item label {
+    cursor: pointer;
+    display: inline-block;
+    height: 28px;
+    width: 28px;
+    border: 2px solid red;
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        left: -4px;
+        width: 36px;
+        height: 36px;
+        border: 1px solid #fff;
+        -webkit-transition: .2s;
+        transition: .2s;
+    }
+    img{
+        width: 34px;
+        height: 34px;
+    }
+}
+
+
+// =========================================>
+
+.sidebar-filter__btns {
+    padding: 15px 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+.sidebar-filter__btns .submit {
+    background: #333;
+    font-weight: 500;
+    font-size: 14px;
+    color: #fff;
+    line-height: 16px;
+    border-radius: 1px;
+    border: none;
+    text-transform: uppercase;
+    padding: 13px 10px;
+    min-width: 120px;
+    max-width: 160px;
+    text-align: center;
+}
+.sidebar-filter__btns .reset {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    border: none;
+    color: #333;
+    background: 0 0;
+    border-radius: 1px;
+    text-transform: uppercase;
+    padding: 13px 0;
+    width: 120px;
+    text-align: center;
+}
